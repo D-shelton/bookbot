@@ -1,6 +1,17 @@
+def count_the_words(text):
+    words = text.split()
+    wordcount = 0
+    for word in words:
+        wordcount +=1
+    print(wordcount)    
+
+
+
 def main():
     with open("books/frankenstein.txt") as frankenstein:
-        contents = frankenstein.read()
-        print (contents)
+        text = frankenstein.read()
+        count_the_words(text)
 
-main ()
+
+if __name__ == "__main__":
+    main()
