@@ -1,16 +1,20 @@
+def main():
+    hardcoded_book = "books/frankenstein.txt"
+    text = get_the_book(hardcoded_book)
+    word_count = count_the_words(text)
+    print(f"{word_count} words in this text")
+
+def get_the_book(path):
+    with open(path) as f:
+        return f.read()
+
+
+
 def count_the_words(text):
     words = text.split()
-    wordcount = 0
-    for word in words:
-        wordcount +=1
-    print(wordcount)    
+    return len(words) 
 
 
-
-def main():
-    with open("books/frankenstein.txt") as frankenstein:
-        text = frankenstein.read()
-        count_the_words(text)
 
 
 if __name__ == "__main__":
