@@ -28,20 +28,22 @@ def count_the_letters(text):
             char_totals[char] = 1
     return char_totals
 
+
+### below here is all for the organize_letters function, organize in the future ###
+
 def organize_letters(char_totals):
     char_list = [{'char': char, 'num': count} for char, count in char_totals.items()]
     char_list.sort(reverse=True, key=lambda char_dict:char_dict['num'])
     return char_list
 
 
-#    
+def sort_on(char_totals):
+    return char_totals["num"]
 
-#def sort_on(dict):
-#    return dict["num"]
-
-#def organize_dictionaries(char_totals):
-#    char_totals.sort(reverse=True, key=sort_on)
-
+def organize_dictionaries(char_totals):
+    char_totals.sort(reverse=True, key=sort_on)
+    return char_totals
+    
 
 if __name__ == "__main__":
     main()
